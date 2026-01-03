@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import os 
-os.chdir(r"C:\Users\motaz\Downloads\Reinhard color transfer")
+os.chdir(r"C:\Users\Downloads\Reinhard color transfer")
 input_dir="input/"
 output_dir="output/"
 input_image_list=os.listdir(input_dir)
@@ -29,4 +29,5 @@ for img in(input_image_list):
                 x=255 if x>255 else x
                 input_img[i,j,k]=x
     input_img = cv2.cvtColor(input_img, cv2.COLOR_LAB2BGR)
+
     cv2.imwrite(output_dir+"modified_"+img,input_img)
